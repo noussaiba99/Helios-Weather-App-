@@ -4,3 +4,20 @@ a desktop weather prediction application based on historical data. It consists f
 <div align="center">
     <img src="/meteo du jour.png" width="400px"</img> 
 </div>
+
+<div align="center">
+    <img src="/nbjour.PNG" width="400px"</img> 
+</div>
+<div align="center">
+    <img src="/carte.PNG" width="400px"</img> 
+</div>
+<div align="center">
+    <img src="/prevision.PNG" width="400px"</img> 
+</div>
+
+<div align="center">
+    <img src="/evolution.PNG" width="400px"</img> 
+</div>
+<div align="center">
+    <img src="/a propos.PNG" width="400px"</img> 
+</div>
