@@ -1,0 +1,143 @@
+﻿<Window x:Class="Helios.MainWindow"
+
+  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Helios"
+        mc:Ignorable="d" Icon="logo_icon.png"
+         Title="         Helios" Loaded="main_load" MaxHeight="600" MinHeight="600" MaxWidth="1250" MinWidth="1250" Height="600" Width="1250" KeyDown="Window_KeyDown" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Name="gridfull"  Height="600" Width="1250">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFB6D7E0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="50" VerticalAlignment="Top" Background="#FF1E6184" Opacity="0.97" Margin="0,25,0,0">
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
+                <materialDesign:PopupBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Foreground="White" Height="30">
+                    <StackPanel Width="150">
+                        <Button Click="mise_ajr" Content="Mise à jour du DS"/>
+
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+
+        </Grid>
+        <StackPanel Margin="10,85,10,94">
+
+            <Image x:Name="MyImage" Source="logos2.png" Margin="197,15
+                   ,199,0" Height="365" Width="834" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            <Rectangle
+            x:Name="MyRectangle"
+            Width="100" 
+            Height="100">
+
+                <Rectangle.Triggers>
+                    <!-- Animates the rectangle's width and height. -->
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                Storyboard.TargetName="MyImage" 
+                                Storyboard.TargetProperty="Height" BeginTime="0:0:0"
+                                From="0" To="310" Duration="0:0:3" 
+                                 />
+
+
+                                <DoubleAnimation
+                                Storyboard.TargetName="MyImage" 
+                                Storyboard.TargetProperty="Width" BeginTime="0:0:0"
+                                From="0" To="870" Duration="0:0:3" 
+                                 />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+            </Rectangle>
+        </StackPanel>
+
+        <StackPanel Margin="534,0,448,10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="214">
+
+            <Rectangle
+            x:Name="MyRectangl"
+            Width="100" 
+            Height="100">
+
+                <Rectangle.Triggers>
+                    <!-- Animates the rectangle's opacity. -->
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard >
+                                <DoubleAnimation
+                                Storyboard.TargetName="demarre" 
+                                Storyboard.TargetProperty="Opacity" BeginTime="0:0:3"
+                                From="0" To="1" Duration="0:0:2" 
+                                  />
+
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+            </Rectangle>
+            <Button x:Name="demarre" Click="demarrer" Margin="0" Opacity="00" Background="#FF1E6184" BorderBrush="{x:Null}" Content="Démarrer" FontSize="18" Height="40" Width="268" 
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    />
+        </StackPanel>
+
+
+        <Grid HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1240" Background="#FF062334">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button  Background="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  FontStyle="Normal" FontWeight="Bold" Foreground="#FF32739B" BorderBrush="{x:Null}" Click="minimize_click" Height="28">
+                    <Button.ToolTip>
+                        <ToolTip Background="#ff062334" Foreground="#FF32739B" Content="Réduire"/>
+                    </Button.ToolTip>
+                    <materialDesign:PackIcon Kind="WindowMinimize"/>
+                </Button>
+                <Button  Background="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="#FF32739B" BorderBrush="{x:Null}" Click="power_click" RenderTransformOrigin="0.525,0.075" Height="28">
+                    <Button.ToolTip>
+                        <ToolTip Background="#ff062334" Foreground="#FF32739B" Content="Fermer"/>
+                    </Button.ToolTip>
+                    <materialDesign:PackIcon Kind="WindowClose"/>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+        <Button Height="30" Width="45" Click="Button_Click_4" Margin="1136,34.5,69,535.5" Background="{x:Null}" BorderBrush="White" >
+            <materialDesign:PackIcon Foreground="White" Kind="FullScreen"  Width="22" Height="22" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button.ToolTip>
+                <ToolTip  Background="#447075C7" Foreground="#FFFFFF" FontSize="10">
+                    <ToolTip.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF57955" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ToolTip.BorderBrush>
+                    <StackPanel>
+                        <Image  Height="22"  Width="23"     Source="icons8-appareil-photo-40.png"/>
+
+                        <TextBlock FontWeight="Bold"><Run Text="Capture d'écran"/></TextBlock>
+
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button  x:Name="date_meteo" Height="35" Width="153" BorderBrush="White"  Background="{x:Null}" Content="date"  Margin="28,32,1069,535" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="22" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Helios" Foreground="#FF327296" FontFamily="Roboto" FontSize="14" Margin="5,0,61,575" Background="{x:Null}" />
+        <TextBlock Visibility="Hidden"  x:Name="ProgressTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,117,10,66" RenderTransformOrigin="0.13,-2.719" Height="417" Width="1230" Foreground="#FF607C8A" ><Run Text="          "/><LineBreak/><Run Text="         "/><Run Text="0%"/></TextBlock>
+        <ProgressBar Visibility="Hidden"  Height="30" Value="0" Minimum="0" Maximum="382122" Name="progressBar" Margin="90,539,69,31"/>
+        <Button Visibility="Hidden" Name="btnProgress" Click="DoWorkButton_Click" Margin="554,479,532,89"  >Start progress</Button>
+
+
+    </Grid>
+</Window>
