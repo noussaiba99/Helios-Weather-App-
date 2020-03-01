@@ -9,15 +9,15 @@ A desktop weather prediction application based on historical data. It consists f
     <img src="/nbjour.PNG" width="400px"</img> 
 </div>
 <div align="center">
-    <img src="/carte.PNG" width="400px"</img> 
+    <img src="/carte.png" width="400px"</img> 
 </div>
 <div align="center">
-    <img src="/prevision.PNG" width="400px"</img> 
+    <img src="/prevision.png" width="400px"</img> 
 </div>
 
 <div align="center">
-    <img src="/evolution.PNG" width="400px"</img> 
+    <img src="/evolution.png" width="400px"</img> 
 </div>
 <div align="center">
-    <img src="/a propos.PNG" width="400px"</img> 
+    <img src="/a propos.png" width="400px"</img> 
 </div>
